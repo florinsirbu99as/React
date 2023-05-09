@@ -4,7 +4,7 @@ import "./App.css";
 function App() {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:8888/recipes")
+    fetch("https://info.eatplants.de/recipes")
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch((err) => console.log(err));

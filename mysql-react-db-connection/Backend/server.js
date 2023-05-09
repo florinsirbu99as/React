@@ -6,19 +6,15 @@ const app = express();
 app.use(cors());
 
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "root",
-  database: "dbname",
-  port: "3306", // DB PORT
+  host: "rdbms.strato.de",
+  user: "dbu2454404",
+  password: "retterschen123",
+  database: "dbs5617911",
+  //port: "3306", // MAMP port 3306
 });
 
 app.get("/", (req, res) => {
-  return res.json("From Backend side");
-});
-
-app.get("/recipes", (req, res) => {
-  const sql = "SELECT * FROM table";
+  const sql = "SELECT * FROM Rezepte";
   db.query(sql, (err, data) => {
     if (err) return res.json(err);
     return res.json(data);
