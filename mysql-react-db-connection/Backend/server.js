@@ -6,10 +6,10 @@ const app = express();
 app.use(cors());
 
 const db = mysql.createConnection({
-  host: "rdbms.strato.de",
-  user: "dbu2454404",
-  password: "retterschen123",
-  database: "dbs5617911",
+  host: "",
+  user: "",
+  password: "",
+  database: "",
   //port: "3306", // MAMP port 3306
 });
 
